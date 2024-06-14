@@ -14,7 +14,7 @@
 	<name>rrss</name>
 	<description>Recurso Humanos</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
