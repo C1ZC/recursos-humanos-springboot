@@ -1,18 +1,27 @@
 package c1zc.rrss.controlador;
 
 // Importaciones necesarias para el funcionamiento del controlador
-import c1zc.rrss.excepcion.RecursoNoEncontradoExcepcion;
-import c1zc.rrss.modelo.Empleado;
-import c1zc.rrss.servicio.IEmpleadoServicio; // Interfaz de servicio para manejar operaciones relacionadas con empleados
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map; // Interfaz de servicio para manejar operaciones relacionadas con empleados
+
 import org.slf4j.Logger; // Biblioteca para el registro de eventos (logging)
 import org.slf4j.LoggerFactory; // Fábrica para crear instancias de Logger
 import org.springframework.beans.factory.annotation.Autowired; // Anotación para inyección de dependencias
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import c1zc.rrss.excepcion.RecursoNoEncontradoExcepcion;
+import c1zc.rrss.modelo.Empleado;
+import c1zc.rrss.servicio.IEmpleadoServicio;
 
 /**
  * EmpleadoControlador es una clase que actúa como controlador REST para manejar solicitudes relacionadas
@@ -26,7 +35,7 @@ import java.util.Map;
 @RequestMapping("rrss-app")
 // Permite solicitudes de orígenes cruzados desde "http://locahost:3000"
 
-@CrossOrigin(value = "http://localhost:3000")
+@CrossOrigin(value = "https://c1zc.github.io/rrss/")
 public class EmpleadoControlador {
 
     // Logger para registrar eventos y mensajes durante la ejecución del programa
