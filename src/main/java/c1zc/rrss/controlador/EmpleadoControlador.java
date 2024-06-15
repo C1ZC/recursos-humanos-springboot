@@ -35,7 +35,7 @@ import c1zc.rrss.servicio.IEmpleadoServicio;
 @RequestMapping("rrss-app")
 // Permite solicitudes de orígenes cruzados desde "http://locahost:3000"  "https://c1zc.github.io/rrss/" "https://rrss-production.up.railway.app/"
 
-@CrossOrigin(value = "http://locahost:3000")
+@CrossOrigin(value = "http://localhost:3000/")
 public class EmpleadoControlador {
 
     // Logger para registrar eventos y mensajes durante la ejecución del programa
